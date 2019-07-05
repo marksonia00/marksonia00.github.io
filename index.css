@@ -1,5 +1,23 @@
 body{
-    background-color: rgb(92, 92, 92);
+    background-color: rgb(235, 235, 235);
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    color: rgba(233, 225, 225, 0.582);
+    margin: 0;
+    padding: 5% auto;
+    border-radius: 5px;
+    background: url('pic/top.jpg') no-repeat center;
+    background-attachment: scroll;
+}
+.top img{
+    margin: 12% auto 7%;
+    border-radius: 77px;
 }
 .container{
     background-color: rgba(212, 188, 188, 0.493);
