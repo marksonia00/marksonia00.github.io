@@ -50,22 +50,6 @@ body{
 .container_block_item{
     margin: auto 2%;
 }
-.input{
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(236, 229, 229, 0.438);
-    color: aliceblue;
-    font-size: 33px;
-    text-align: left;
-    min-height: 99%;
-    margin: auto 15%;
-    padding: 2%;
-    border-radius: 10px;
-}
-.input input{
-    height: 200px;;
-    margin: 1%;
-}
 .bottom{
     display: flex;
     height: 63px;
