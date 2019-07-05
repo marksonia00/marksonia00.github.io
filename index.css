@@ -6,7 +6,7 @@ body{
     flex-direction: column;
     height: 600px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 22px;
+    font-size: 44px;
     text-align: center;
     color: rgba(233, 225, 225, 0.582);
     margin: 0 0;
@@ -17,9 +17,13 @@ body{
     background-attachment: fixed;
     background-position: top;
 }
+.top h2{
+    margin: 2% auto;
+}
 .top img{
-    margin: 12% auto 7%;
-    border-radius: 77px;
+    margin: 12% auto 3%;
+    width: 171px;
+    border-radius: 177px;
 }
 .container{
     display: flex;
