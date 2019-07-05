@@ -40,6 +40,9 @@ body{
     border-radius: 11px;
     padding: 2%;
 }
+.container_block_item{
+    margin: auto 3%;
+}
 .input{
     display: flex;
     flex-direction: column;
