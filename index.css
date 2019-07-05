@@ -60,3 +60,9 @@ body{
 .input input{
     margin: 1%;
 }
+@media screen and (max-width: 700px){
+    .container_block_item{
+    display: flex;
+    flex-direction: column;
+    }
+}
