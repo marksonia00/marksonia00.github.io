@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(34, 34, 34);
 }
 .top{
     display: flex;
@@ -9,11 +9,13 @@ body{
     font-size: 22px;
     text-align: center;
     color: rgba(233, 225, 225, 0.582);
-    margin: 0;
+    margin: 0 0;
     padding: 5% auto;
     border-radius: 5px;
-    background: url('pic/top.jpg') no-repeat center;
-    background-attachment: scroll;
+    background: url('pic/top.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
 }
 .top img{
     margin: 12% auto 7%;
