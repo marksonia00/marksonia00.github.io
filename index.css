@@ -32,6 +32,9 @@ body{
     padding: 3%;
     transition: background-color 3.9 ease-in .2;
 }
+.container img{
+    width: 177px;
+}
 .container_block{
     display: flex;
     min-height: 99%;
@@ -41,7 +44,7 @@ body{
     padding: 2%;
 }
 .container_block_item{
-    margin: auto 3%;
+    margin: auto 2%;
 }
 .input{
     display: flex;
@@ -61,8 +64,10 @@ body{
     margin: 1%;
 }
 @media screen and (max-width: 700px){
-    .container_block_item{
-    display: flex;
+    .container_block{
     flex-direction: column;
+    }
+    .container_block_item{
+        margin: auto auto;
     }
 }
