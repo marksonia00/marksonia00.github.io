@@ -41,11 +41,15 @@ body{
 }
 .container_block{
     display: flex;
-    min-height: 99%;
+    min-height: 200px;
     background-color: rgb(236, 234, 234);
     margin: 5%;
     border-radius: 18px;
     padding: 2%;
+    transition: min-height .5s ease-in .1s;
+}
+.container_block:hover{
+    min-height: 500px;
 }
 .container_block_item{
     margin: auto 2%;
