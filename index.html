@@ -13,10 +13,22 @@
         </top>
         <div id="app">
             <div class="container">
+                <div class="container_block">
+                  <h3>Skill</h3>
+                  <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                  </ul> 
+                </div>
+                <div class="container_block">
+                  <h3>Works</h3>  
+                </div>
                 <div v-for="block in blockcontainer" 
                     v-bind:title="title" 
-                    v-bind:paragraph="blockcontainer"></div>
-         </div>
+                    v-bind:paragraph="blockcontainer">
+                </div>        
+            </div>
          <div class="input"> 
                 <h3>title</h3>          
                 <input type="text" v-model="title">
