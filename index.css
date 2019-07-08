@@ -10,14 +10,15 @@ body{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 44px;
     text-align: center;
-    color: rgba(233, 225, 225, 0.582);
+    color: rgba(233, 225, 225, 0.582) ;
     margin: 0 0;
     padding: 5% auto;
-    border-radius: 5px;
-    background: url('pic/top.jpg') no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: top;
+    border-radius: 15px;
+    background-color: rgba(160, 160, 160, 0.068);
+    transition: background-color .4s linear .15s;
+}
+.top:hover{
+    background-color: rgba(160, 160, 160, 0.637); 
 }
 .top h2{
     margin: 2% auto;
