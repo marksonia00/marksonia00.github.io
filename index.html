@@ -4,17 +4,21 @@
         <title>markChin</title>
         <link rel="stylesheet" type="text/css" href="index.css">
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous" defer></script>
         <script src="index.js" defer></script>
     </head>
     <body>
+        <div id="app">
         <top class="top">
            <img src="pic/picc.JPG">
            <h2>Mark Chin</h2>
-           <h5>Keep Trying</h5>
-        </top>
-        <div id="app">
+           <h5 >Keep Trying</h5>
+        </top>    
             <div class="container">
-                <div class="container_block">
+                <div class="container_block" id="cb1">
                        <img class="container_block_item"
                             src="pic/personicon.png" alt="">      
                         <h3 class="container_block_item">
@@ -24,7 +28,7 @@
                           <li>Taoyuan, Taiwan</li>
                       </ul> 
                     </div>
-                <div class="container_block">
+                <div class="container_block" id="cb2">
                     <img class="container_block_item"
                         src="pic/skillicon.png" alt="">      
                     <h3 class="container_block_item">
@@ -35,7 +39,7 @@
                       <li>JavaScript</li>
                   </ul> 
                 </div>
-                <div class="container_block">
+                <div class="container_block" id="cb3">
                     <img class="container_block_item"
                         src="pic/workicon.png" alt="">      
                     <h3 class="container_block_item">
