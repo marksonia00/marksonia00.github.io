@@ -1,6 +1,7 @@
 body{
-    background-color: rgb(4,4,4);
-    transition: background-color .7s linear .1s;
+    background: rgb(4,4,4) no-repeat fixed bottom;
+    background-image: url(pic/cb0bg.png);
+    transition: background-image .9s linear .3s;
 }
 .top{
     display: flex;
@@ -42,7 +43,7 @@ body{
 .container_block{
     display: flex;
     min-height: 200px;
-    background-color: rgba(236, 234, 234, 0.582);
+    background-color: rgba(236, 234, 234, 0.425);
     margin: 5%;
     border-radius: 18px;
     padding: 2%;
@@ -51,7 +52,7 @@ body{
 }
 .container_block:hover{
     min-height: 500px;
-    background-color: rgba(236, 234, 234, 0.979);
+    background-color: rgba(236, 234, 234, 0.719);
 }
 .container_block_item{
     margin: auto 2%;
