@@ -45,6 +45,7 @@ body{
 }
 .container_block{
     display: flex;
+    flex-wrap: wrap;
     min-height: 200px;
     background-color: rgba(236, 234, 234, 0.425);
     margin: 5%;
