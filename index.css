@@ -1,7 +1,7 @@
 body{
     background: rgb(4,4,4) no-repeat fixed bottom;
     background-image: url(pic/cb0bg.png);
-    transition: background-image .9s linear .3s;
+    transition: background-image .9s linear .7s;
 }
 .top{
     display: flex;
@@ -31,8 +31,9 @@ body{
 .container{
     display: flex;
     flex-direction: column;
-    color: rgb(27, 28, 29);
+    color: rgb(57, 59, 61);
     font-size: 33px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 90%;
     margin: 5% 2%;
     border-radius: 10px;
@@ -52,11 +53,15 @@ body{
         background-color .57s ease-out .1s;
 }
 .container_block:hover{
-    min-height: 500px;
+    min-height: 200px;
     background-color: rgba(236, 234, 234, 0.719);
 }
 .container_block_item{
     margin: auto 2%;
+}
+.map{
+    widows: 400px;
+    height: 400px;
 }
 .bottom{
     display: flex;

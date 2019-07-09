@@ -8,6 +8,9 @@
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous" defer></script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+        </script>
         <script src="index.js" defer></script>
     </head>
     <body>
@@ -44,16 +47,16 @@
                         src="pic/workicon.png" alt="">      
                     <h3 class="container_block_item">
                                 Works</h3>
-                   <ul class="container_block_item">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                   </ul>   
-                </div>   
-            </div>
-       </div> 
+                   
+                </div>  
+                <div id=map>
+
+                </div> 
+            </div>        
        <bottom class="bottom">
             <h5>©2019 by MarkChin</h5>
+            <h6>{{wid}}</h6>
        </bottom>
+        </div>
     </body>
 </html>
