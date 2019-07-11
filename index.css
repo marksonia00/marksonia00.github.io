@@ -59,6 +59,9 @@ body{
 .container .container_block_item img{
     width: 141px;
 }
+.container .container_block .smLinkImg{
+    width: 88px;
+}
 .container_block{
     display: flex;
     flex-wrap: wrap;
@@ -76,7 +79,11 @@ body{
 .container_block_item{
     margin: auto 2%;
 }
+.container_block_item p{
+    margin: auto 0 auto 20%;
+}
 .container_block a{
+    margin: auto auto;
     text-decoration:none;
     color: rgba(219, 218, 218, 0.99);
     opacity: .7;
@@ -89,6 +96,7 @@ body{
 }
 /*--------------------process circle--------------------*/
 .circle_process{
+    display: flex;
     position: relative;
     width: 159px;
     height : 160px;
@@ -199,7 +207,6 @@ body{
         margin:auto auto;
     }
     .container_block_item{
-        margin: 2% auto;
         line-height: 78px;
     }
     .circle_process{
