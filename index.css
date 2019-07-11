@@ -1,12 +1,11 @@
 body{
-    background: rgb(4,4,4) no-repeat fixed top;
-    background-image: url(pic/cb2bg.png);
-    background-size: 100vw;
+    background: rgb(231, 231, 231) no-repeat top;
 }
 .nav{
     position: fixed;
     float: initial;
     top: 0;
+    padding: 2% 0;
     width: 98vw;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 44px;
@@ -27,10 +26,13 @@ body{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 44px;
     text-align: center;
-    color: rgba(112, 107, 107, 0.582) ;
+    color: rgba(228, 220, 220, 0.76) ;
     padding: 2% auto;
     border-radius: 15px;
-    background-color: rgba(231, 231, 231, 0.493);
+    background-image: url(./pic/topog.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .top h2{
     margin: 2% auto 0; 
@@ -48,44 +50,52 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 53px;
     min-height: 90%;
-    margin: 5% 2%;
+    margin: 2% 1%;
     border-radius: 10px;
 }
 .container img{
     width: 177px;
 }
+.container .container_block_item img{
+    width: 141px;
+}
 .container_block{
     display: flex;
     flex-wrap: wrap;
     min-height: 200px;
-    width: 88vw;
+    width: 92vw;
     background-color: rgba(236, 234, 234, 0.425);
-    margin: 1% auto;
+    margin: 1% 0;
     border-radius: 18px;
     padding: 2%;
+}
+.container_block:nth-child(odd){
+    background-color: rgba(14, 14, 14, 0.425);
+    color: rgb(233, 233, 233);
 }
 .container_block_item{
     margin: auto 2%;
 }
 .container_block a{
     text-decoration:none;
-    color: rgba(49, 48, 48, 0.582);
+    color: rgba(219, 218, 218, 0.99);
     opacity: .7;
     transition: color .4s linear .1s,
                 opacity .3s linear .1s;
 }
 .container_block a:hover{
-    color: rgb(49, 48, 48, 0.99);
+    color: rgba(219, 218, 218, 0.99);
     opacity: 1;
 }
+/*--------------------process circle--------------------*/
 .circle_process{
     position: relative;
-    width: 199px;
-    height : 200px;
+    width: 159px;
+    height : 160px;
 }
 .circle_process .wrapper{
-    width: 100px;
-    height: 200px;
+    width: 80px;
+    height: 160px;
     position: absolute;
     top:0;
     overflow: hidden;
@@ -97,30 +107,30 @@ body{
     left:0;
 }
 .circle_process .circle{
-    width: 160px;
-    height: 160px;
-    border:20px solid rgba(141, 141, 141, 0.486);
+    width: 128px;
+    height: 128px;
+    border:16px solid rgba(141, 141, 141, 0.486);
     border-radius: 50%;
     position: absolute;
     top:0;
 }
 .circle_process .rightcircle{
-    border-top:20px solid rgba(111, 233, 111, 0.753);
-    border-right:20px solid rgba(111, 233, 111, 0.753);
+    border-top:16px solid rgba(111, 233, 111, 0.753);
+    border-right:16px solid rgba(111, 233, 111, 0.753);
     right:0;
     transform : rotate(45deg);
     animation: circle_right 2s linear .4s;
 }
 .circle_process .leftcircle{
-    border-bottom:20px solid rgba(111, 233, 111, 0.753);
-    border-left:20px solid rgba(111, 233, 111, 0.753);
+    border-bottom:16px solid rgba(111, 233, 111, 0.753);
+    border-left:16px solid rgba(111, 233, 111, 0.753);
     left:0;
     transform : rotate(-45deg);
     animation: circle_left 2s ease-out .4s;
 }
 .circle_process .rightcircle_react{
-    border-top:20px solid rgba(111, 233, 111, 0.753);
-    border-right:20px solid rgba(111, 233, 111, 0.753);
+    border-top:16px solid rgba(111, 233, 111, 0.753);
+    border-right:16px solid rgba(111, 233, 111, 0.753);
     right:0;
     transform : rotate(-45deg);
     animation: circle_right_r 2s linear .4s;
