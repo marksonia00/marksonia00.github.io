@@ -203,9 +203,10 @@ body{
         font-size: 53px;
     }
     .container_block{
-        margin:auto auto;
+        flex-direction: column;
     }
     .container_block_item{
+        margin:auto auto;
         line-height: 78px;
     }
     .circle_process{
