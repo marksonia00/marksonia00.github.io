@@ -1,7 +1,24 @@
 body{
-    background: rgb(4,4,4) no-repeat fixed bottom;
+    background: rgb(4,4,4) no-repeat fixed top;
     background-image: url(pic/cb2bg.png);
-    transition: background-image .9s linear .7s;
+    background-size: 100vw;
+}
+.nav{
+    position: fixed;
+    float: initial;
+    top: 0;
+    width: 98vw;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 44px;
+}
+.nav a{
+    text-decoration:none;
+    color: rgb(233, 225, 225, 0.582);
+    margin: 0 3%;
+    transition: color .4s linear .1s;
+}
+.nav a:hover{
+    color: rgb(233, 225, 225, 0.99);
 }
 .top{
     display: flex;
@@ -10,18 +27,13 @@ body{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 44px;
     text-align: center;
-    color: rgba(233, 225, 225, 0.582) ;
-    margin: 0 0;
-    padding: 5% auto;
+    color: rgba(112, 107, 107, 0.582) ;
+    padding: 2% auto;
     border-radius: 15px;
-    background-color: rgba(160, 160, 160, 0.068);
-    transition: background-color .4s linear .15s;
-}
-.top:hover{
-    background-color: rgba(160, 160, 160, 0.637); 
+    background-color: rgba(231, 231, 231, 0.493);
 }
 .top h2{
-    margin: 2% auto;
+    margin: 2% auto 0; 
 }
 .top img{
     margin: 12% auto 3%;
@@ -38,7 +50,6 @@ body{
     min-height: 90%;
     margin: 5% 2%;
     border-radius: 10px;
-    padding: 3%;
 }
 .container img{
     width: 177px;
@@ -47,19 +58,25 @@ body{
     display: flex;
     flex-wrap: wrap;
     min-height: 200px;
+    width: 88vw;
     background-color: rgba(236, 234, 234, 0.425);
-    margin: 5%;
+    margin: 1% auto;
     border-radius: 18px;
     padding: 2%;
-    transition: min-height .47s ease-out .1s,
-        background-color .57s ease-out .1s;
-}
-.container_block:hover{
-    min-height: 200px;
-    background-color: rgba(236, 234, 234, 0.719);
 }
 .container_block_item{
     margin: auto 2%;
+}
+.container_block a{
+    text-decoration:none;
+    color: rgba(49, 48, 48, 0.582);
+    opacity: .7;
+    transition: color .4s linear .1s,
+                opacity .3s linear .1s;
+}
+.container_block a:hover{
+    color: rgb(49, 48, 48, 0.99);
+    opacity: 1;
 }
 .circle_process{
     position: relative;
@@ -88,22 +105,22 @@ body{
     top:0;
 }
 .circle_process .rightcircle{
-    border-top:20px solid rgba(79, 233, 79, 0.849);
-    border-right:20px solid rgba(79, 233, 79, 0.849);
+    border-top:20px solid rgba(111, 233, 111, 0.753);
+    border-right:20px solid rgba(111, 233, 111, 0.753);
     right:0;
     transform : rotate(45deg);
     animation: circle_right 2s linear .4s;
 }
 .circle_process .leftcircle{
-    border-bottom:20px solid rgba(79, 233, 79, 0.849);
-    border-left:20px solid rgba(79, 233, 79, 0.849);
+    border-bottom:20px solid rgba(111, 233, 111, 0.753);
+    border-left:20px solid rgba(111, 233, 111, 0.753);
     left:0;
     transform : rotate(-45deg);
     animation: circle_left 2s ease-out .4s;
 }
 .circle_process .rightcircle_react{
-    border-top:20px solid rgba(79, 233, 79, 0.849);
-    border-right:20px solid rgba(79, 233, 79, 0.849);
+    border-top:20px solid rgba(111, 233, 111, 0.753);
+    border-right:20px solid rgba(111, 233, 111, 0.753);
     right:0;
     transform : rotate(-45deg);
     animation: circle_right_r 2s linear .4s;
@@ -165,6 +182,9 @@ body{
     flex-direction: column;
     }
     .container_block_item{
+        margin: auto auto;
+    }
+    .circle_process{
         margin: auto auto;
     }
 }

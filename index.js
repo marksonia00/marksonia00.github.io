@@ -18,6 +18,7 @@ function initMap() {
 const app = new Vue({
     el:"#app",
     data:{
+        scroll:'',
         wid:'',
         title:'',
         paragraph:'',
@@ -31,5 +32,13 @@ const block = Vue.component('block',
         props:['title','paragraph'],
         template: '<div class="block"><h3>{{title}}</h3><p>{{paragraph}}</p></div>'
     }
+)
+$(function () {
+  $(window).scroll(function () {
+    app.scroll = $(this).scrollTop()/700-.08;
+    if(app.scroll<.99)
+    {$("nav").css("background-color", `rgb(112, 107, 107,${app.scroll})`)}
+    });
+  }
 )
 console.log("HEY")
