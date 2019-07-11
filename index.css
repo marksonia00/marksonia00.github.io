@@ -203,7 +203,6 @@ body{
         font-size: 53px;
     }
     .container_block{
-        flex-direction: column;
         margin:auto auto;
     }
     .container_block_item{
