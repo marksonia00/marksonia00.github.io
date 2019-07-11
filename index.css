@@ -187,12 +187,19 @@ body{
         100%{
             transform : rotate(-135deg);
         }}
-@media screen and (max-width: 700px){
+@media screen and (max-width: 1000px){
+    nav,.top{
+        font-size: 67px;
+    }
+    .container{
+        font-size: 53px;
+    }
     .container_block{
     flex-direction: column;
+        margin:auto auto;
     }
     .container_block_item{
-        margin: auto auto;
+        margin: 2% auto;
     }
     .circle_process{
         margin: auto auto;
