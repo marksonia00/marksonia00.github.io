@@ -27,7 +27,7 @@ body{
     font-size: 44px;
     text-align: center;
     color: rgba(228, 220, 220, 0.76) ;
-    padding: 2% auto;
+    padding: 1% auto;
     border-radius: 15px;
     background-image: url(./pic/topog.jpg);
     background-size: cover;
@@ -35,7 +35,7 @@ body{
     background-attachment: fixed;
 }
 .top h2{
-    margin: 2% auto 0; 
+    margin: 0 auto 0 auto; 
 }
 .top img{
     margin: 12% auto 3%;
@@ -195,11 +195,12 @@ body{
         font-size: 53px;
     }
     .container_block{
-    flex-direction: column;
+        flex-direction: column;
         margin:auto auto;
     }
     .container_block_item{
         margin: 2% auto;
+        line-height: 78px;
     }
     .circle_process{
         margin: auto auto;
