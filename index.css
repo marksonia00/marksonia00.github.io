@@ -149,7 +149,7 @@ body{
     transform : rotate(-135deg);
     animation: circle_right_r 2s linear .4s;
 }
-.map{
+#map{
     widows: 400px;
     height: 400px;
 }
