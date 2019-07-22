@@ -1,5 +1,5 @@
 body{
-    background: rgb(231, 231, 231) no-repeat top;
+    background: rgb(133, 133, 133) no-repeat top;
 }
 .nav{
     position: fixed;
@@ -26,7 +26,8 @@ body{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 44px;
     text-align: center;
-    color: rgba(228, 220, 220, 0.76) ;
+    text-shadow: 2px 2px 3px rgb(48, 48, 48);
+    color: rgba(255, 255, 255, 0.897) ;
     padding: 1% auto;
     border-radius: 15px;
     background-image: url(./pic/topog.jpg);
