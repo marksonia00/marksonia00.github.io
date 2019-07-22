@@ -4,9 +4,10 @@ $("#cb2").mouseover(function(){$("body").css("background-image","url(pic/cb2bg.p
 $("#cb3").mouseover(function(){$("body").css("background-image","url(pic/cb3bg.png)");})
 $("#top").mouseover(function(){$("body").css("background-image","url(pic/cb0bg.png)");})
 }
+var map;
+var uluru = {lat: -25.363, lng: 131.044};
 function initMap() {
-    var uluru = {lat: -25.363, lng: 131.044};
-    var map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById('map'), {
       zoom: 4,
       center: uluru
     });
