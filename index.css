@@ -1,5 +1,5 @@
 body{
-    background: rgb(133, 133, 133) no-repeat top;
+    background: rgb(0, 0, 0) no-repeat top;
 }
 .nav{
     position: fixed;
@@ -68,7 +68,7 @@ body{
     flex-wrap: wrap;
     min-height: 200px;
     width: 92vw;
-    background-color: rgba(236, 234, 234, 0.425);
+    background-color: rgba(236, 234, 234, 0.904);
     margin: 1% 0;
     border-radius: 18px;
     padding: 2%;
@@ -90,6 +90,9 @@ body{
     opacity: .7;
     transition: color .4s linear .1s,
                 opacity .3s linear .1s;
+}
+.circle_process .container_block_circle{
+    float: left;
 }
 .container_block a:hover{
     color: rgba(219, 218, 218, 0.99);
@@ -197,13 +200,17 @@ body{
             transform : rotate(-135deg);
         }}
 @media screen and (max-width: 1000px){
-    nav,.top{
-        font-size: 67px;
+    .nav{
+        font-size: 31px;
+    }
+    .top{
+        font-size: 37px;
     }
     .container{
-        font-size: 53px;
+        font-size: 37px;
     }
     .container_block{
+        float: left;
         flex-direction: column;
     }
     .container_block_item{
