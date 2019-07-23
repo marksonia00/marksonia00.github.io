@@ -1,0 +1,223 @@
+body{
+    background: rgb(0, 0, 0) no-repeat top;
+}
+.nav{
+    position: fixed;
+    float: initial;
+    top: 0;
+    padding: 2% 0;
+    width: 98vw;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 44px;
+}
+.nav a{
+    text-decoration:none;
+    color: rgb(233, 225, 225, 0.582);
+    margin: 0 3%;
+    transition: color .4s linear .1s;
+}
+.nav a:hover{
+    color: rgb(233, 225, 225, 0.99);
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 44px;
+    text-align: center;
+    text-shadow: 2px 2px 3px rgb(48, 48, 48);
+    color: rgba(255, 255, 255, 0.897) ;
+    padding: 1% auto;
+    border-radius: 15px;
+    background-image: url(./pic/topog.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.top h2{
+    margin: 0 auto 0 auto; 
+}
+.top img{
+    margin: 12% auto 3%;
+    width: 171px;
+    border-radius: 177px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    color: rgb(57, 59, 61);
+    font-size: 33px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 53px;
+    min-height: 90%;
+    margin: 2% 1%;
+    border-radius: 10px;
+}
+.container img{
+    width: 177px;
+}
+.container .container_block_item img{
+    width: 141px;
+}
+.container .container_block .smLinkImg{
+    width: 88px;
+}
+.container_block{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 200px;
+    width: 92vw;
+    color: rgb(233, 233, 233);
+    background-color: rgba(77, 77, 77, 0.904);
+    margin: 1% 0;
+    border-radius: 18px;
+    padding: 2%;
+}
+.container_block:nth-child(odd){
+    background-color: rgba(14, 14, 14, 0.425);
+}
+.container_block_item{
+    margin: auto 2%;
+}
+.container_block_item p{
+    margin: auto 0 auto 20%;
+}
+.container_block a{
+    margin: auto auto;
+    text-decoration:none;
+    color: rgba(219, 218, 218, 0.99);
+    opacity: .7;
+    transition: color .4s linear .1s,
+                opacity .3s linear .1s;
+}
+.circle_process .container_block_circle{
+    float: left;
+}
+.container_block a:hover{
+    color: rgba(219, 218, 218, 0.99);
+    opacity: 1;
+}
+/*--------------------process circle--------------------*/
+.circle_process{
+    display: flex;
+    position: relative;
+    width: 159px;
+    height : 160px;
+}
+.circle_process .wrapper{
+    width: 80px;
+    height: 160px;
+    position: absolute;
+    top:0;
+    overflow: hidden;
+}
+.circle_process .right{
+    right:0;
+}
+.circle_process .left{
+    left:0;
+}
+.circle_process .circle{
+    width: 128px;
+    height: 128px;
+    border:16px solid rgba(141, 141, 141, 0.486);
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+}
+.circle_process .rightcircle{
+    border-top:16px solid rgba(111, 233, 111, 0.753);
+    border-right:16px solid rgba(111, 233, 111, 0.753);
+    right:0;
+    transform : rotate(45deg);
+    animation: circle_right 2s linear .4s;
+}
+.circle_process .leftcircle{
+    border-bottom:16px solid rgba(111, 233, 111, 0.753);
+    border-left:16px solid rgba(111, 233, 111, 0.753);
+    left:0;
+    transform : rotate(-45deg);
+    animation: circle_left 2s ease-out .4s;
+}
+.circle_process .rightcircle_react{
+    border-top:16px solid rgba(111, 233, 111, 0.753);
+    border-right:16px solid rgba(111, 233, 111, 0.753);
+    right:0;
+    transform : rotate(-45deg);
+    animation: circle_right_r 2s linear .4s;
+}
+.circle_process .leftcircle_react{
+    left:0;
+    transform : rotate(-135deg);
+    animation: circle_right_r 2s linear .4s;
+}
+#map{
+    widows: 400px;
+    height: 400px;
+}
+.bottom{
+    display: flex;
+    height: 63px;
+    margin-top: 10%;
+    background-color: rgba(78, 78, 78, 0.445);
+    color: black;
+    font-size: 23px;
+}
+.bottom h5{
+    margin: auto;
+}
+@keyframes circle_right
+{
+    0%{
+        transform : rotate(-135deg);
+    }
+    50%,100%{
+        transform : rotate(45deg);
+    }}
+@keyframes circle_left
+    {
+        0%,50%{
+            transform : rotate(-135deg);
+        }
+        100%{
+            transform : rotate(-45deg);
+        }}
+@keyframes circle_right_r
+{
+    0%{
+        transform : rotate(-135deg);
+    }
+    50%,100%{
+        transform : rotate(-45deg);
+    }}
+@keyframes circle_left_r
+    {
+        0%,50%{
+            transform : rotate(-135deg);
+        }
+        100%{
+            transform : rotate(-135deg);
+        }}
+@media screen and (max-width: 600px){
+    .nav{
+        font-size: 22px;
+    }
+    .top{
+        font-size: 31px;
+    }
+    .container{
+        font-size: 26px;
+    }
+    .container_block{
+        float: left;
+        flex-direction: column;
+    }
+    .container_block_item{
+        margin:auto auto;
+        line-height: 78px;
+    }
+    .circle_process{
+        margin: auto auto;
+    }
+}

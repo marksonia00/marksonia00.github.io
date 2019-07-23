@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>markChin</title>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous" defer></script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHP6m6ny3jWn6ycBe2YDDttIU3-uJzAaQ&callback=initMap"></script>
+        <script src="index.js" defer></script>
+    </head>
+    <body>
+        <div id="app">
+        <nav class="nav">
+            <a href="#cb1">About</a>
+            <a href="#cb2">Skill</a>
+            <a href="#cb3">Works</a>
+            <a href="#cb4">Contact</a>
+        </nav>
+        <top class="top" id="top">
+           <img src="pic/picc.JPG">
+           <h2>Mark Chin</h2>
+           <h5 >Frontend Beginner</h5>
+        </top>    
+            <div class="container">
+                <div class="container_block" id="cb1">
+                       <img class="container_block_item"
+                            src="pic/personicon.png" alt="">      
+                        <h3 class="container_block_item">About</h3>
+                        <ul class="container_block_item">
+                          <li>NTPU CSIE BS</li>
+                          <li>Taoyuan, Taiwan</li>
+                          <li>Substitute Military Service now</li>
+                      </ul> 
+                </div>
+                <div class="container_block" id="cb2">
+                    <img class="container_block_item"
+                        src="pic/skillicon.png" alt="">      
+                    <h3 class="container_block_item">Skills</h3>                       
+                   <div class="container_block_item">
+                    <div class="circle_process container_block_circle">
+                            <div class="wrapper right">
+                                <div class="circle rightcircle"></div>
+                            </div>
+                            <div class="wrapper left">
+                                <div class="circle leftcircle" id="leftcircle"></div>
+                            </div> 
+                            <img src="./pic/3skillicon.png" id="skill1"> 
+                            <p>ES6,jquery,Sass</p>
+                    </div>
+                     
+                    <div class="circle_process container_block_item">
+                            <div class="wrapper right">
+                                <div class="circle rightcircle_react"></div>
+                            </div>
+                            <div class="wrapper left">
+                                <div class="circle leftcircle_react" id="leftcircle"></div>
+                            </div> 
+                            <img class="container_block_item" src="./pic/reacticon.png" id="skill1"> 
+                            <p class="container_block_item">keep_learning..</p>
+
+                    </div>
+                    <div class="circle_process container_block_item">
+                            <div class="wrapper right">
+                                <div class="circle rightcircle_react"></div>
+                            </div>
+                            <div class="wrapper left">
+                                <div class="circle leftcircle_react" id="leftcircle"></div>
+                            </div> 
+                            <img class="container_block_item" src="./pic/vue.png" id="skill1"> 
+                            <p class="container_block_item">keep_learning..</p>
+                    </div> 
+                   </div>               
+                </div>
+                <div class="container_block" id="cb3">
+                    <img class="container_block_item"
+                        src="pic/workicon.png" alt="">      
+                    <h3 class="container_block_item">Works</h3>
+                   <a class="container_block_item" href="./Portfolio1.html">Mini Survey<br><img class="pic" src="./pic/work1thumb.JPG"></a>
+                </div>  
+                <div class="container_block" id="cb4">
+                        <img class="container_block_item"
+                        src="pic/contacticon.png" alt="">      
+                        <h3 class="container_block_item">Contact</h3>
+                        <a href="https://www.facebook.com/mark.chin.56"><img class="smLinkImg" src="./pic/smiconfb.png"></a>
+                        <a href="https://www.instagram.com/marksonia00/"><img class="smLinkImg" src="./pic/smiconig.png"></a>
+                        <a href="marksonia00@gmail.com"><img class="smLinkImg" src="./pic/smicongp.png"></a>
+                </div>
+                <div class="container_block" id="cb5">
+                    <div id="map"></div>
+                </div>   
+            </div>        
+       <bottom class="bottom">
+            <h5>©2019 by MarkChin {{wid}}</h5>
+       </bottom>
+        </div>
+    </body>
+</html>
