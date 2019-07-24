@@ -15,7 +15,7 @@
       <img class="logo" src="./pic/svy.svg" width="40" alt="logo">
       <h1>Satisfaction Survey</h1>
     </header>
-    <form v-on:reset="resetFields" v-on:submit.prevent="submitForm">
+    <form v-on:reset="resetFields" v-on:submit="submitForm">
       <div class="form-row">
         <div class="form-field">
           <label for="first-name">First Name</label>
@@ -145,5 +145,25 @@
       </div>
     </form>
   </div>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#config-web-app -->
+
+  <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+  apiKey: "AIzaSyDcjed2KZEtVxCISVfNh8YFzxVQQr_XsUc",
+  authDomain: "omega-baton-247517.firebaseapp.com",
+  databaseURL: "https://omega-baton-247517.firebaseio.com",
+  projectId: "omega-baton-247517",
+  storageBucket: "",
+  messagingSenderId: "606063863233",
+  appId: "1:606063863233:web:5f866e5d21b9c3bd"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  </script>    
 </body>
 </html>

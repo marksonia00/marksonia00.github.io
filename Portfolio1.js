@@ -1,3 +1,4 @@
+var db = firebase.database();
 const app = new Vue({
     el: '#app',
     data: {
@@ -55,7 +56,7 @@ const app = new Vue({
         return this.email.includes('@');
       },
       formIsValid: function() {
-        return this.firstName && this.lastName && this.emailIsValid && this.purchaseAgreementSigned;
+        return this.firstName && this.lastName && this.emailIsValid;
       },
       submitButtonStyles: function() {
         if (this.formIsValid) {
@@ -111,11 +112,21 @@ const app = new Vue({
         this.firstName = '';
         this.lastName = '';
         this.email = '';
-        this.ticketQuantity = 1;
-        this.ticketType = 'general';
         this.referrals = [];
         this.specialRequests = '';
         this.purchaseAgreementSigned = false;
+      },
+      submitForm: function(){
+        db.ref('/Survey').push({
+          firstName:this.firstName,
+          lastName:this.lastName,
+          email:this.email,
+          Grade:this.Grade,
+          lecture1:this.lecture1,
+          lecture2:this.lecture2,
+          lecture3:this.lecture3,
+          lecture4:this.lecture4
+        })
       }
     }
   });
