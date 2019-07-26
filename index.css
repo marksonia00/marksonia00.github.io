@@ -1,5 +1,6 @@
 1*{
     border:solid black 2px ;
+    background-color: rgba(240, 240, 240, 0.76);
 }
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -38,7 +39,7 @@ h3{
 .top{
     display: flex;
     margin: 0;
-    background-image: url(../pic/topog.jpg);
+    background-image: url(./pic/topog.jpg);
     background-attachment: fixed;
     background-size: cover;
     min-height: 77vh;
@@ -78,6 +79,9 @@ h3{
     margin: 0 2vw;
 }
 .block img{
+    width: 18vw;
+}
+.block .smLinkImg{
     width: 8vw;
 }
 .container .timeline{

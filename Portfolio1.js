@@ -117,6 +117,7 @@ const app = new Vue({
         this.purchaseAgreementSigned = false;
       },
       submitForm: function(){
+        this.firstName='77';
         db.ref('/Survey').push({
           firstName:this.firstName,
           lastName:this.lastName,

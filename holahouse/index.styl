@@ -1,0 +1,89 @@
+body
+    font: 37px sans-serif, Verdana
+    color: white 
+    background-attachment: fixed;
+    background-size: cover;
+    background-image url(./img/bgimg.jpg)
+.nav
+    display: flex
+    background-color: rgba(131, 131, 131, 0.521)
+    justify-content: space-around
+    a
+        color: rgba(240, 240, 240, 0.76)
+        font-family: Arial-Black,Papyrus
+        text-decoration: none
+        transition: text-shadow .2s linear .1s,
+                    color .2s linear .1s
+        &:hover
+            text-shadow: 2px 2px 3px rgba(53, 53, 53, 0.521)
+            color: rgba(240, 240, 240, 0.99)
+
+.container
+    position: relative
+    display: flex
+    justify-content: center
+    
+    .innerpage 
+        position: absolute
+        display: flex
+        justify-content: space-around
+        align-items: center
+        width: 83vw
+        height: 78vh
+        margin-top: 3%
+        font-size: 62%
+        background-color: rgba(131, 131, 131, 0.521)
+        opacity 0
+        transform: translateX(100px)
+        transition: opacity .7s ease-out .2s,
+                    transform .7s ease-out .2s
+        .page1img
+            height: 67%
+            width: 49%
+            background-image url(./img/homeimg1.jpg) 
+            background-size: cover
+            animation: page1imgRound 18s linear .2s infinite 
+        section
+            background-color: rgba(112, 107, 106, 0.781)
+            border-radius: 25px
+            padding: 4% 
+        &:nth-child(2)
+            background-color: rgba(221, 231, 176, 0.721)
+        &:nth-child(3)
+            background-color: rgba(176, 231, 183, 0.721)
+        &:nth-child(4)
+            background-color: rgba(186, 176, 231, 0.721)
+        &:nth-child(5)
+            background-color: rgba(231, 184, 176, 0.721)
+        &:target
+            opacity 1
+            transform: translateX(0)
+@keyframes page1imgRound
+    0%
+        background-image url(./img/homeimg1.jpg)
+    20%
+        background-image url(./img/homeimg1.jpg)
+    25%    
+        background-image url(./img/homeimg2.jpg)  
+    45%
+        background-image url(./img/homeimg2.jpg)
+    50%
+        background-image url(./img/homeimg3.jpg)
+    70%
+        background-image url(./img/homeimg3.jpg)
+    75%    
+        background-image url(./img/homeimg4.jpg)
+    95%    
+        background-image url(./img/homeimg4.jpg)
+@media screen and (max-width:990px) and (min-width:770px) 
+    body
+        font-size: 29px
+    
+@media screen and (max-width:770px)
+    body
+        font-size: 24px
+    .innerpage 
+        flex-direction: column
+        .page1img
+            width: 88%
+
