@@ -22,16 +22,16 @@ body
     position: relative
     display: flex
     justify-content: center
-    
     .innerpage 
         position: absolute
         display: flex
         justify-content: space-around
         align-items: center
+        flex-wrap: wrap
         width: 83vw
         height: 78vh
         margin-top: 3%
-        font-size: 62%
+        font-size: 59%
         background-color: rgba(131, 131, 131, 0.521)
         opacity 0
         transform: translateX(100px)
@@ -43,21 +43,41 @@ body
             background-image url(./img/homeimg1.jpg) 
             background-size: cover
             animation: page1imgRound 18s linear .2s infinite 
-        section
+        .section
             background-color: rgba(112, 107, 106, 0.781)
+            background-size cover
             border-radius: 25px
-            padding: 4% 
-        &:nth-child(2)
-            background-color: rgba(221, 231, 176, 0.721)
-        &:nth-child(3)
-            background-color: rgba(176, 231, 183, 0.721)
-        &:nth-child(4)
-            background-color: rgba(186, 176, 231, 0.721)
+            padding-left: 4%
+            margin-left: 2%    
+        &:nth-child(2),&:nth-child(3),&:nth-child(4)
+            background-color:rgba(131, 131, 131, 0.481)
+            flex-direction: column
+            align-items: flex-start
+            .section
+                width: 41%
+                height 44%
+                padding-left: 2%
+                margin-left: 2%
+        &:nth-child(2) 
+            .section
+                width: 88%
+                background-image url(./img/newsbar.jpg)
         &:nth-child(5)
             background-color: rgba(231, 184, 176, 0.721)
+        &:nth-child(6)           
+            background-color: rgba(176, 231, 183, 0.721)
+
         &:target
             opacity 1
             transform: translateX(0)
+#menu-1
+    background-image url(./img/menu-burger.jpg)
+#menu-2
+    background-image url(./img/menu-sand.jpg)
+#menu-3
+    background-image url(./img/menu-pasta.jpg)
+#menu-4
+    background-image url(./img/menu-drink.jpg)
 @keyframes page1imgRound
     0%
         background-image url(./img/homeimg1.jpg)
@@ -82,6 +102,8 @@ body
 @media screen and (max-width:770px)
     body
         font-size: 24px
+    .nav
+        flex-direction: column
     .innerpage 
         flex-direction: column
         .page1img
