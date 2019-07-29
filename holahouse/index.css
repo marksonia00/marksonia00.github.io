@@ -51,7 +51,7 @@ body {
 .container .innerpage .section {
   height: 67%;
   width: 34%;
-  background-color: rgba(112,107,106,0.781);
+  background-image: url("./img/sectionimg.jpg");
   background-size: cover;
   border-radius: 25px;
   padding-left: 4%;
@@ -101,7 +101,15 @@ th {
 .mailblock {
   width: 93%;
   height: 67%;
-  background-color: rgba(121,194,212,0.637);
+}
+.mailblock section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.mailblock img {
+  width: 16%;
 }
 #menu-1 {
   background-image: url("./img/menu-burger.jpg");
