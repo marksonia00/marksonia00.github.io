@@ -74,6 +74,10 @@ body {
   width: 93%;
   background-image: url("./img/newsbar.jpg");
 }
+.container .innerpage:nth-child(5) .section {
+  height: 67vh;
+  width: 93%;
+}
 .container .innerpage:target {
   opacity: 1;
   transform: translateX(0);
@@ -91,8 +95,8 @@ th {
   border: 1px solid #fff;
 }
 #map {
-  width: 48vw;
-  height: 67vh;
+  width: 48%;
+  height: 67%;
   background-color: rgba(121,194,212,0.637);
 }
 #menu-1 {
