@@ -139,10 +139,14 @@ th {
     height: 95vh;
     width: 15vw;
   }
+  table {
+    height: 77%;
+  }
   tbody {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 88%;
   }
   th {
     display: block;
