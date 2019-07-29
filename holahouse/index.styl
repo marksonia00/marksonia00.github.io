@@ -25,6 +25,7 @@ body
     .innerpage 
         position: absolute
         display: flex
+        flex-direction: row
         justify-content: space-around
         align-items: center
         flex-wrap: wrap
@@ -44,6 +45,8 @@ body
             background-size: cover
             animation: page1imgRound 18s linear .2s infinite 
         .section
+            height: 67%
+            width: 34%
             background-color: rgba(112, 107, 106, 0.781)
             background-size cover
             border-radius: 25px
@@ -65,7 +68,7 @@ body
         &:nth-child(5)
             .section
                 height: 67vh
-                width: 93%
+                width: 41%
 
         &:target
             opacity 1
@@ -80,8 +83,8 @@ th
     padding: 1%
     text-align: center
     border 1px solid #ffffff  
-#map           
-    width: 48%
+#map,.mailblock         
+    width: 93%
     height 67%
     background-color: rgba(121, 194, 212, 0.637)           
 #menu-1

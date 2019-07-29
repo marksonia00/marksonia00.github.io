@@ -28,6 +28,7 @@ body {
 .container .innerpage {
   position: absolute;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
@@ -48,6 +49,8 @@ body {
   animation: page1imgRound 18s linear 0.2s infinite;
 }
 .container .innerpage .section {
+  height: 67%;
+  width: 34%;
   background-color: rgba(112,107,106,0.781);
   background-size: cover;
   border-radius: 25px;
@@ -76,7 +79,7 @@ body {
 }
 .container .innerpage:nth-child(5) .section {
   height: 67vh;
-  width: 93%;
+  width: 41%;
 }
 .container .innerpage:target {
   opacity: 1;
@@ -94,8 +97,9 @@ th {
   text-align: center;
   border: 1px solid #fff;
 }
-#map {
-  width: 48%;
+#map,
+.mailblock {
+  width: 93%;
   height: 67%;
   background-color: rgba(121,194,212,0.637);
 }
