@@ -2,6 +2,7 @@ body
     font: 37px sans-serif, Verdana
     color: white 
     background-attachment: fixed;
+    background-position: 40% top 
     background-size: cover;
     background-image url(./img/bgimg.jpg)
 .nav
@@ -72,7 +73,7 @@ body
 
         &:target
             opacity 1
-            transform: translateX(0)
+            transform: translate(0)
 table
     width: 97% 
     margin-top: 2%
@@ -124,11 +125,27 @@ th
     
 @media screen and (max-width:770px)
     body
-        font-size: 24px
+        font-size: 22px
     .nav
         flex-direction: column
-    .innerpage 
-        flex-direction: column
-        .page1img
-            width: 88%
+        align-items: center
+        height 95vh
+        width 15vw
+    .container
+        position: absolute
+        top 5vh
+        left 58vw
+        .innerpage 
+            width 72vw
+            height: 90vh
+            transform: translateX(30px)
+            .section,.page1img,&:nth-child(5) .section
+                background-position right 30% 
+                height 46%
+                width: 90%
+            &:nth-child(3) .section
+
+                height 24%
+                width: 90%
+
 
