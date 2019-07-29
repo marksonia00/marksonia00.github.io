@@ -5,6 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <link rel="stylesheet" href="index.css">
+        <script src="index.js" defer></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBukyKpLEVUKrovN_uV7qFDvsbHynr2P3A&callback=initMap"></script>
     </head>
     <body>
         <nav class="nav">
@@ -38,23 +40,57 @@
             <div class="innerpage" id="page3">
                 <div class="section" id="menu-1">
                     <h4>Burger</h4>
-                    <p>BBQ BACON<br>Originally from "Dorchestah"<br>THE SUPER MELT<br>THE FIESTA BURGER</p>
+                    <p>BBQ BACON<br>Originally from "Dorchestah"<br>THE SUPER MELT<br>and more...</p>
                 </div>    
                 <div class="section" id="menu-2">    
                     <h4>Sandwich</h4>
-                    <p>PORTOBELLO SANDWICH<br>MOM'S SLOPPY JOE<br>JENN'S CHICKEN SANDWICH<br>CRISPY HADDOCK SANDWICH</p>
+                    <p>PORTOBELLO SANDWICH<br>MOM'S SLOPPY JOE<br>JENN'S CHICKEN SANDWICH<br>and more...</p>
                 </div>
                 <div class="section" id="menu-3">    
                     <h4>Pasta</h4>
-                    <p>SMOKED BACON ARUGULA<br>JENN'S CHICKEN WAHLBOWL<br>OUR BURGER WAHLBOWL<br>Penne Marinara</p>
+                    <p>SMOKED BACON ARUGULA<br>JENN'S CHICKEN WAHLBOWL<br>OUR BURGER WAHLBOWL<br>and more...</p>
                 </div>
                 <div class="section" id="menu-4">    
                         <h4>Drink</h4>
                         <p>ROOT BEER FLOAT<br>CREAMSICLE FLOAT<br>GRILLED FLUFFANUTTA<br>and more...</p>
                 </div>     
             </div>
-            <div class="innerpage" id="page4"></div>
-            <div class="innerpage" id="page5"></div>
+            <div class="innerpage" id="page4">
+                <div class="section"> 
+                    <table>
+                        <tr><th colspan="5">7:00PM~10:00PM</th></tr>                    
+                        <tr>
+                            <th>Monday</th>
+                            <th>Tuesday</th>    
+                            <th>Wedsday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                        </tr>
+                        <tr>
+                            <th>Resti Rough</th>
+                            <th>Potination</th>    
+                            <th>Boiled poper</th>
+                            <th>David Duo</th>
+                            <th>Cristina Cravios</th>
+                        </tr>
+                    </table>
+                </div> 
+                <div class="section">
+                    <table>
+                            <tr><th colspan="2">6:00PM~11:00PM</th></tr>                    
+                            <tr>
+                                <th>Saturday</th>
+                                <th>Sunday</th>    
+                            </tr>
+                            <tr><th colspan="2">Beach BBQ & BAR</th></tr>
+                    </table>     
+                </div> 
+            </div>       
+            <div class="innerpage" id="page5">
+                <div class="section">
+                    <div id="map"></div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
