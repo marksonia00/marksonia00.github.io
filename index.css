@@ -3,6 +3,8 @@
     background-color: rgba(63, 63, 63, 0.541);
 }
 body{
+    margin:0px;
+    padding:0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 33px;
 }
@@ -28,14 +30,20 @@ h3{
     display: flex;
     padding: 1%;
     justify-content: space-around;
-    width: 100%;
+    width: 100vw;
     text-align: center;
-    background-color: rgba(224, 224, 224, 0.664);
+    background-color: rgba(37, 37, 37, 0.664);
 }
 .nav a{
     width: 18%;
-    color: black;
+    color: rgba(231, 231, 231, 0.568);
+    text-decoration: none;
+    transition: color .3s linear .1s
 }
+.nav a:hover{
+    color: rgba(231, 231, 231, 0.952);
+}
+
 .top{
     display: flex;
     margin: 0;
