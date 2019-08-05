@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  width: 88vw;
+  padding: 2%;
+}
+.nav a {
+  width: 17%;
+  background-color: rgba(131,131,131,0.791);
+  padding: 2%;
+  border-radius: 33px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.2s linear 0.1s;
+}
+.nav a:hover {
+  background-color: rgba(231,131,131,0.721);
+}
+.filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 24vh;
+  padding: 2%;
+  background-color: rgba(131,131,131,0.191);
+}
+.filter_class {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 64%;
+  height: 26%;
+  cursor: default;
+}
+.filter_class .labeldiv {
+  text-align: center;
+  width: 20%;
+  border-radius: 25px;
+}
+.filter_class .labeldiv:hover {
+  background-color: rgba(231,131,131,0.321);
+}
+.bgr {
+  background-color: rgba(231,131,131,0.621);
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 2%;
+  width: 88vw;
+  transition: all 0.3s linear 0.1s;
+}
+.container .itemblock {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 33%;
+  height: 23vh;
+}
+.container .itemblock h3 {
+  margin: 0;
+}
+.container .itemblock img,
+.container .itemblock section {
+  margin-left: 2%;
+  height: 100%;
+}
+.reveal-modal-bg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  background: rgba(0,0,0,0.8);
+  z-index: 100;
+  display: none;
+  top: 0;
+  left: 0;
+}
+.reveal-modal {
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  top: 100px;
+  left: 50%;
+  margin-left: -40vw;
+  width: 65vw;
+  background: #eee url("modal-gloss.png") no-repeat -200px -80px;
+  position: absolute;
+  z-index: 101;
+  padding: 30px 40px 34px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  -box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+.close-reveal-modal {
+  font-size: 22px;
+}
+line-height: .5 {
+  position: absolute;
+  top: 8px;
+  right: 11px;
+  color: #aaa;
+  text-shadow: 0 -1px 1px rbga(0, 0, 0, 0.6);
+  font-weight: bold;
+  cursor: pointer;
+}
+@media screen and (max-width: 950px) {
+  .container .itemblock {
+    width: 47%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .container .itemblock {
+    width: 77%;
+  }
+}

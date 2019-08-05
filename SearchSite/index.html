@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SS</title>
+        <meta charset="utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js" defer></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
+		<script type="text/javascript" src="jquery.reveal.js"></script>
+    </head>
+    <body>
+        <nav class="nav">
+            <a href="" class="big-link" data-reveal-id="myModal">推薦店鋪</a>
+        </nav>
+        <div class="filter">
+            <span class="filter_class"><h3>地區</h3>
+                <div class="labeldiv" name="area" onclick="sel('area',0)">全部</div>
+                <div class="labeldiv" name="area" onclick="sel('area',1)">北部</div>
+                <div class="labeldiv" name="area" onclick="sel('area',2)">中部</div>
+                <div class="labeldiv" name="area" onclick="sel('area',3)">南部</div>
+            </span>
+            <span class="filter_class"><h3>類型</h3>
+                <div class="labeldiv" name="type" onclick="sel('type',0)">全部</div>
+                <div class="labeldiv" name="type" onclick="sel('type',1)">餐館</div>
+                <div class="labeldiv" name="type" onclick="sel('type',2)">咖啡</div>
+                <div class="labeldiv" name="type" onclick="sel('type',3)">攤車</div>
+            </span>
+            <span class="filter_class"><h3>價位</h3>
+                <div class="labeldiv" name="cost" onclick="sel('cost',0)">全部</div>
+                <div class="labeldiv" name="cost" onclick="sel('cost',1)">低</div>
+                <div class="labeldiv" name="cost" onclick="sel('cost',2)">中</div>
+                <div class="labeldiv" name="cost" onclick="sel('cost',3)">高</div>
+            </span>
+            <span class="filter_class"><h3>評論</h3>
+                <div class="labeldiv" name="disc" onclick="sel('disc',0)">>0</div>
+                <div class="labeldiv" name="disc" onclick="sel('disc',1)">>20</div>
+                <div class="labeldiv" name="disc" onclick="sel('disc',2)">>50</div>
+                <div class="labeldiv" name="disc" onclick="sel('disc',3)">>100</div>
+            </span>
+            <span class="filter_class">
+                <div class="labeldiv" onclick="reset()">Reset</div>
+            </span>           
+        </div>
+        <div class="container" id="containbox"></div>
+        <div id="myModal" class="reveal-modal">
+			<h1>推薦店鋪給我們</h1>
+            <label>店名</label><input type="text" />
+            <label>地區</label><input type="text" />
+            <label>城市</label><input type="text" />
+            <label>類型</label><input type="text" />
+            <label></label>
+		</div>
+    </body>
+</html>
