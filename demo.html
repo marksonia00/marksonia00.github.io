@@ -1,7 +1,26 @@
-<html><body>
-    <label id="BPMdisplay"></label>
-    <button id="startBtn" style="width:120px;">Start</button>
-    <button onClick="stop()" style="width:120px;">stop</button>
+<html>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 48vh;
+        }
+        .container .item {
+            text-align: center;
+            font-size: 45px;
+            height: 33%;
+            width: 88%;
+            margin: 2px;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <label id="BPMdisplay" class="item">Press Start</label>
+            <button id="startBtn" class="item">Start</button>
+            <button onClick="stop()" class="item">stop</button>
+        </div>
 <script type="text/javascript">
     var startBtn = document.getElementById("startBtn")
     var BPMdisplay = document.getElementById("BPMdisplay");
@@ -53,14 +72,14 @@
         }
         startBtn.removeEventListener('click', start, false)
         event.stopPropagation();
-        BPMdisplay.innerHTML = 'Start Measure';
+        BPMdisplay.innerHTML = 'Ready';
     }
     function stop(){
         startBtn.addEventListener('click', start, false)
         document.onclick = undefined;
         tempoboxy.reset();
         document.onkeypress = undefined;
-        BPMdisplay.innerHTML = '';
+        BPMdisplay.innerHTML = 'Press Start';
     }
     function isMobile() {
         try{ document.createEvent("TouchEvent"); return true; }
