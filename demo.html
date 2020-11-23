@@ -1,0 +1,72 @@
+<html><body>
+    <label id="BPMdisplay"></label>
+    <button id="startBtn" style="width:120px;">Start</button>
+    <button onClick="stop()" style="width:120px;">stop</button>
+<script type="text/javascript">
+    var startBtn = document.getElementById("startBtn")
+    var BPMdisplay = document.getElementById("BPMdisplay");
+    var tempoboxy = new function() {
+        return {
+            num : 0,
+            oldtime : 0,
+            bpms : new Array(),
+            bpm : function() {
+                var i = 0;
+                var sum = 0;
+                var d = new Date();
+                var time = d.getHours()*1000*60*60 + d.getMinutes()*1000*60 + d.getSeconds()*1000 + d.getMilliseconds();
+                this.bpms[this.num] = 60000/(time-this.oldtime);
+                if(this.oldtime==0) { //第一次記數
+                    this.oldtime = time;
+                    BPMdisplay.innerHTML = "000.00 BPM";
+                } else if(this.bpms[this.num]>999) { //連點兩下重置
+                    this.reset();
+                    BPMdisplay.innerHTML = "over limit";
+                    document.onkeydown = undefined;
+                } else { //累積記數計算
+                    this.oldtime = time;
+                    this.num++;
+                    var len = this.bpms.length;
+                    for(i=0;i<len;i++) sum += this.bpms[i];
+                    BPMdisplay.innerHTML = (sum/len).toPrecision(5) + " BPM";
+                }
+            },
+            reset : function() {
+                this.num = 0;
+                this.oldtime = 0;
+                this.bpms = new Array();
+            }
+        };
+    };
+
+    function start(event){
+        if(!isMobile()) {
+            document.onclick = function(e) {
+                tempoboxy.bpm()
+            }
+        } else {
+            document.onkeypress = function(e) {
+                if( e.keyCode == 32 ) {
+                    tempoboxy.bpm()
+                }
+            }
+        }
+        startBtn.removeEventListener('click', start, false)
+        event.stopPropagation();
+        BPMdisplay.innerHTML = 'Start Measure';
+    }
+    function stop(){
+        startBtn.addEventListener('click', start, false)
+        document.onclick = undefined;
+        tempoboxy.reset();
+        document.onkeypress = undefined;
+        BPMdisplay.innerHTML = '';
+    }
+    function isMobile() {
+        try{ document.createEvent("TouchEvent"); return true; }
+        catch(e){ return false;}
+    }
+    startBtn.addEventListener('click', start, false)
+    console.log(startBtn)
+</script>
+</body></html>
