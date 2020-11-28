@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
 <html>
     <head>
+        <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
     </head>
     <style>
@@ -23,11 +24,12 @@
         <div class="container">
             <label id="BPMdisplay" class="item">Press Start</label>
             <button id="startBtn" class="item">Start</button>
-            <button onClick="stop()" class="item">stop</button>
+            <button onClick="stop(event)" class="item">stop</button>
         </div>
 <script type="text/javascript">
     var startBtn = document.getElementById("startBtn")
     var BPMdisplay = document.getElementById("BPMdisplay");
+    // code reference: https://toolboxy.blogspot.com/2011/11/bpm-tempo.html?m=1
     var tempoboxy = new function() {
         return {
             num : 0,
@@ -39,14 +41,10 @@
                 var d = new Date();
                 var time = d.getHours()*1000*60*60 + d.getMinutes()*1000*60 + d.getSeconds()*1000 + d.getMilliseconds();
                 this.bpms[this.num] = 60000/(time-this.oldtime);
-                if(this.oldtime==0) { //第一次記數
+                if(this.oldtime==0) { // first count
                     this.oldtime = time;
                     BPMdisplay.innerHTML = "000.00 BPM";
-                } else if(this.bpms[this.num]>999) { //連點兩下重置
-                    this.reset();
-                    BPMdisplay.innerHTML = "over limit";
-                    document.onkeydown = undefined;
-                } else { //累積記數計算
+                } else { // add count
                     this.oldtime = time;
                     this.num++;
                     var len = this.bpms.length;
@@ -54,20 +52,20 @@
                     BPMdisplay.innerHTML = (sum/len).toPrecision(5) + " BPM";
                 }
             },
-            reset : function() {
+            reset : function() { // reset count
                 this.num = 0;
                 this.oldtime = 0;
                 this.bpms = new Array();
             }
         };
     };
-
+    // Start button click event
     function start(event){
-        if(isMobile()) {
+        if(isMobile()) { // for Mobile
             document.onclick = function(e) {
                 tempoboxy.bpm()
             }
-        } else {
+        } else { // for PC
             document.onkeypress = function(e) {
                 if( e.keyCode == 32 ) {
                     tempoboxy.bpm()
@@ -78,18 +76,23 @@
         event.stopPropagation();
         BPMdisplay.innerHTML = 'Ready';
     }
+    // Stop button click event
     function stop(){
         startBtn.addEventListener('click', start, false)
         document.onclick = undefined;
         tempoboxy.reset();
         document.onkeypress = undefined;
+        event.target.blur();
         BPMdisplay.innerHTML = 'Press Start';
     }
+    // detect Execution environment
     function isMobile() {
         try{ document.createEvent("TouchEvent"); return true; }
         catch(e){ return false;}
     }
+    // prevent Start button triggered by keypress
+    startBtn.addEventListener('click', function(event){event.target.blur()}, false)
+    // set Start button default event
     startBtn.addEventListener('click', start, false)
-    console.log(startBtn)
 </script>
 </body></html>
